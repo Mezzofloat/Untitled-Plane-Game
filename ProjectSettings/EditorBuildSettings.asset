@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/InFlight.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/InBreaking.unity
+    guid: ab4ae9eb194ddb848bd64ee172f03508
+  - enabled: 1
+    path: Assets/Scenes/AxertAtoll.unity
+    guid: 2062f0a469e7aa744b4b2e3e383e8d39
+  - enabled: 1
+    path: Assets/Scenes/FregoIslands.unity
+    guid: 14ec331250b775441a871281f96d12e2
+  - enabled: 1
+    path: Assets/Scenes/IstempoIsthmus.unity
+    guid: 820c0b94041f7b64da4f73c84b4f9793
+  - enabled: 1
+    path: Assets/Scenes/JanaPeninsula.unity
+    guid: dee43b42587104d4aab920efc11f2d0c
+  - enabled: 1
+    path: Assets/Scenes/MisIsles.unity
+    guid: 2b194d11d0c8fe74a9218bed46a0c6ca
+  - enabled: 1
+    path: Assets/Scenes/OtoReef.unity
+    guid: a681bee274931094298639a735d8d8d9
+  - enabled: 1
+    path: Assets/Scenes/RookcastleArchipelago.unity
+    guid: 5a03e372056ccc24e82bfcc4bae70e6f
+  - enabled: 1
+    path: Assets/Scenes/SplitSpit.unity
+    guid: e0c84a348ed5b744eabd66897a0cd117
+  m_configObjects: {}

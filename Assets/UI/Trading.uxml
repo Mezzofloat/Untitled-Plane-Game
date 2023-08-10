@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="TradingPanel" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); height: auto; width: 50%; flex-direction: row; left: 50%;">
+        <ui:MultiColumnListView show-border="false" style="flex-grow: 1; opacity: 1;">
+            <ui:Columns>
+                <ui:Column name="trading-input" title="Input" />
+                <ui:Column name="trading-output" title="Output" />
+            </ui:Columns>
+        </ui:MultiColumnListView>
+    </ui:VisualElement>
+</ui:UXML>
