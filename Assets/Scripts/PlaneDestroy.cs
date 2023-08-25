@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 public class PlaneDestroy : MonoBehaviour
 {
@@ -30,13 +31,20 @@ public class PlaneDestroy : MonoBehaviour
         {
             health--;
             hearts[^1].GetComponent<Animator>().SetTrigger("Explode");
+            hearts.RemoveAt(hearts.Count - 1);
         }
 
         if (health == 0)
         {
-            Destroy(gameObject);
+            Invoke("DelayDestroy", 1);
 
-            OnPlaneDestroy?.Invoke();
+            GetComponent<PlayerInput>().DeactivateInput();
+            GetComponent<BoxCollider2D>().enabled = false;
         }
+    }
+
+    void DelayDestroy() {
+        Destroy(gameObject);
+        OnPlaneDestroy?.Invoke();
     }
 }
