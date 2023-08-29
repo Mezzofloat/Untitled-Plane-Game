@@ -14,6 +14,10 @@ public class PlayerInventory : MonoBehaviour
     int shellsInInventory;
     int pearlsInInventory;
 
+    void Awake() {
+        TradesClick.OnTradesClick += Trade;
+    }
+
     // Start is called before the first frame update
     void OnPickup()
     {
@@ -53,6 +57,18 @@ public class PlayerInventory : MonoBehaviour
 
             GameObject newPearl = Instantiate(pearl, transform.position, transform.rotation);
             SpawnValuables.pearls.Add(newPearl.transform);
+        }
+    }
+
+    void Trade(TradesClick tc) {
+        if (int.TryParse(tc.GetComponentsInChildren<TextMeshProUGUI>()[0].text.Split(' ')[0], out var result)) {
+            if (shellsInInventory >= result) { 
+                shellsInInventory -= result;
+                shellsInventory.text = shellsInInventory.ToString();
+
+                pearlsInInventory += int.Parse(tc.GetComponentsInChildren<TextMeshProUGUI>()[1].text.Split(' ')[0]);
+                pearlsInventory.text = pearlsInInventory.ToString();
+            }
         }
     }
 }
