@@ -9,7 +9,7 @@ public class ShellSpawn : MonoBehaviour
     [SerializeField] CompositeCollider2D tilemap;
     
     #nullable enable
-    public static List<Transform>? shells {get; set;}
+    public static List<Transform>? shells {get; set;} = new();
 
     // Start is called before the first frame update
     void Awake()

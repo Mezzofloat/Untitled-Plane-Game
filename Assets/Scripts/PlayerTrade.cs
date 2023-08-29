@@ -25,7 +25,7 @@ public class PlayerTrade : MonoBehaviour
             objTexts[1].text = trade.output;
             
             if (obj != null) obj.transform.position += Vector3.up * y;
-            y -= 115;
+            y -= 135;
         }
     }
 

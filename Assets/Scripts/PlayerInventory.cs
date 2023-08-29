@@ -8,8 +8,7 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] TMP_Text inventory;
     [SerializeField] float reachDistance;
     [SerializeField] GameObject shell;
-
-    static List<string> items = new(1){"nothing"};
+    
     int shellsInInventory;
 
     // Start is called before the first frame update
