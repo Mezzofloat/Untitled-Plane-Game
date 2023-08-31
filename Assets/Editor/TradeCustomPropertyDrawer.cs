@@ -1,14 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.UIElements;
-using UnityEditor.UIElements;
 using UnityEditor;
 
 [CustomPropertyDrawer(typeof(Trade))]
 public class TradeCustomPropertyDrawer : PropertyDrawer
 {
-    VisualTreeAsset uxml = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UI/TradePropertyDrawer.uxml");
     StyleSheet ss = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/UI/Trade.uss");
 
     public override VisualElement CreatePropertyGUI(SerializedProperty property) {
@@ -32,7 +27,7 @@ public class TradeCustomPropertyDrawer : PropertyDrawer
         var outputField = Create<TextField>("output-field", "text-field");
         outputField.bindingPath = property.FindPropertyRelative("output").propertyPath;
         textParent.Add(outputField);
-
+        
         root.Add(textParent);
 
         return root;    
@@ -41,10 +36,10 @@ public class TradeCustomPropertyDrawer : PropertyDrawer
     VisualElement Create(params string[] classNames) => Create<VisualElement>(classNames);
 
     T Create<T>(params string[] classNames) where T : VisualElement, new() {
-        var ele = new T();
+        var instance = new T();
         foreach (var className in classNames) {
-            ele.AddToClassList(className);
+            instance.AddToClassList(className);
         }
-        return ele;
+        return instance;
     }
 }

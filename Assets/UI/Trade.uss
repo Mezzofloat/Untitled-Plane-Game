@@ -6,7 +6,7 @@
     position: relative;
     top: 2px;
     left: 3px;
-    min-width: 90.2px;
+    min-width: 125px;
 }
 
 .arrow {
