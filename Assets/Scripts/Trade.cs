@@ -36,6 +36,6 @@ public class Trade
 
     public override int GetHashCode()
     {
-        return base.GetHashCode();
+        return input.GetHashCode() ^ (output.GetHashCode() << 1);
     }
 }
