@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class MovePlayer : MonoBehaviour
 {
     [SerializeField] float speed = 7f;
+    [SerializeField] Animator anim;
 
     Vector3 input;
     Vector3 prevPosition;
@@ -22,6 +23,13 @@ public class MovePlayer : MonoBehaviour
     {
         input = new Vector3(value.Get<Vector2>().x, value.Get<Vector2>().y);
         
+        if (input.x != 0 || input.y != 0) {
+            anim.SetFloat("X", input.x);
+            anim.SetFloat("Y", input.y);
+            anim.SetBool("IsWalking", true);
+        } else {
+            anim.SetBool("IsWalking", false);
+        }
     }
 
     void FixedUpdate()

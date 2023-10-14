@@ -1414,6 +1414,7 @@ GameObject:
   - component: {fileID: 1472137576}
   - component: {fileID: 1472137577}
   - component: {fileID: 1472137578}
+  - component: {fileID: 1472137581}
   m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
@@ -1531,6 +1532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
+  anim: {fileID: 1472137581}
 --- !u!114 &1472137576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1651,6 +1653,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tradeUnit: {fileID: 9016465236937050834, guid: 68e0f7f7a3937604687f1a38a6c97276, type: 3}
   tradeWrapper: {fileID: 367291919}
+--- !u!95 &1472137581
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472137571}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e8a9f069cbf727b468f5e7d9e1881b35, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1498934951
 GameObject:
   m_ObjectHideFlags: 0
