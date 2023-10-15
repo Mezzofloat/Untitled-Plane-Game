@@ -139,6 +139,66 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: player-spritesheet_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: -0.016393442}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 73
+      width: 108
+      height: 61
+    spriteID: 1cecf049bd543b34696fe490c613f600
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 73}
+  - name: player-spritesheet_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -0.016393442}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 142
+      width: 108
+      height: 61
+    spriteID: fb73e891edb18884a82e774f7331b22a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 142}
+  - name: player-spritesheet_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.016393442}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 120
+      y: 4
+      width: 108
+      height: 61
+    spriteID: 7747cafb02f49814fa2b7299279732e2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 120, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -148,7 +208,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: player-spritesheet
+    - name: player-spritesheet_Frame_0
       frameIndex: 0
       cellRect:
         x: 10
@@ -156,6 +216,30 @@ ScriptedImporter:
         width: 108
         height: 61
       spriteId: a35bb75c12663ed4ea8313a27f597c82
+    - name: player-spritesheet_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 10
+        y: 1
+        width: 108
+        height: 61
+      spriteId: 1cecf049bd543b34696fe490c613f600
+    - name: player-spritesheet_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 10
+        y: 1
+        width: 108
+        height: 61
+      spriteId: fb73e891edb18884a82e774f7331b22a
+    - name: player-spritesheet_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 10
+        y: 1
+        width: 108
+        height: 61
+      spriteId: 7747cafb02f49814fa2b7299279732e2
     linkedCells: []
     parentIndex: -1
   platformSettings: []
