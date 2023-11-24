@@ -206,7 +206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 854413545}
         m_TargetAssemblyTypeName: IslandHop, Assembly-CSharp
         m_MethodName: IslandSwitch
         m_Mode: 5
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 854413545}
         m_TargetAssemblyTypeName: IslandHop, Assembly-CSharp
         m_MethodName: IslandSwitch
         m_Mode: 5
@@ -868,7 +868,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 854413545}
         m_TargetAssemblyTypeName: IslandHop, Assembly-CSharp
         m_MethodName: IslandSwitch
         m_Mode: 5
@@ -1366,7 +1366,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 854413545}
         m_TargetAssemblyTypeName: IslandHop, Assembly-CSharp
         m_MethodName: IslandSwitch
         m_Mode: 5
@@ -2035,7 +2035,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 854413545}
         m_TargetAssemblyTypeName: IslandHop, Assembly-CSharp
         m_MethodName: IslandSwitch
         m_Mode: 5
@@ -2168,7 +2168,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 854413545}
         m_TargetAssemblyTypeName: IslandHop, Assembly-CSharp
         m_MethodName: IslandSwitch
         m_Mode: 5
@@ -2435,7 +2435,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 854413545}
         m_TargetAssemblyTypeName: IslandHop, Assembly-CSharp
         m_MethodName: IslandSwitch
         m_Mode: 5
