@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class CompleteFlight : MonoBehaviour
 {
-    public static int timeInSeconds { private get; set; }
-    public static string destination { private get; set; }
+    public static int timeInSeconds { private get; set; } = 15;
+    public static string destination { private get; set; } = "JanaPeninsula";
 
-    void Start() => Invoke("End", timeInSeconds);
+    void Start() => Invoke("End", 5);
     void End() => SceneManager.LoadScene(destination);
 }

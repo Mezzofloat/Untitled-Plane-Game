@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class IslandHop : MonoBehaviour
 {
     public void IslandSwitch(string islandName) {
-        SceneManager.LoadScene(islandName);
+        CompleteFlight.destination = islandName;
+        SceneManager.LoadScene("InFlight");
     }
 }
