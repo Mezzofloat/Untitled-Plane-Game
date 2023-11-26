@@ -422,7 +422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xPos: -29
   duration: 2
-  cameraToBeMoved: {fileID: 0}
+  cameraToBeMoved: {fileID: 525170903}
   plane: {fileID: 1769006121}
 --- !u!4 &136359434
 Transform:
@@ -21263,8 +21263,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard\Mouse
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
