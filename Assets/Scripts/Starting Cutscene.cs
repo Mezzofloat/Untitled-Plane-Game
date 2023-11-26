@@ -6,19 +6,15 @@ using Unity.VisualScripting;
 
 public class StartingCutscene : MonoBehaviour
 {
-    [SerializeField] CameraMove cameraMove;
+    [SerializeField] float xPos;
+    [SerializeField] float duration;
+    [Space(20)]
+    [SerializeField] CameraMove cameraToBeMoved;
     [SerializeField] Transform plane;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        cameraMove.ToFollow = plane;
-        plane.DOMoveX(-7.13f, 4).SetEase(Ease.OutSine).OnComplete(() => cameraMove.ChangeToPlayer());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        cameraToBeMoved.ToFollow = plane;
+        plane.DOMoveX(xPos, duration).SetEase(Ease.OutSine).OnComplete(() => cameraToBeMoved.ChangeToPlayer());
     }
 }
