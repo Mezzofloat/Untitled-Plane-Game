@@ -3,35 +3,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using DG.Tweening;
+using UnityEngine.UI;
+using Unity.VisualScripting;
 
-public class TradesClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler
+public class TradesClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public static event Action<TradesClick> OnTradesClick;
 
-    public void OnPointerClick(PointerEventData eventData)
+    float fillAmount;
+
+    Image whiteArrow;
+
+    Tweener arrowFill;
+
+    public void Awake() {
+        
+    }
+
+    public void OnEnable()
     {
-        OnTradesClick?.Invoke(this);
+        whiteArrow = transform.Find("White Arrow").gameObject.GetComponent<Image>();
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        transform.localScale *= 0.9f;
+        arrowFill = whiteArrow.DOFillAmount(1, 1).SetEase(Ease.InQuad);
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        transform.localScale /= 0.9f;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        arrowFill.Kill();
+        if (whiteArrow.fillAmount != 1) { 
+            whiteArrow.DOFillAmount(0, 0.5f).SetEase(Ease.Linear);
+        } else {
+            OnTradesClick?.Invoke(this);
+            whiteArrow.DOFillAmount(0, 0);
+        }
     }
 }
