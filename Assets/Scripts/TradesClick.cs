@@ -15,30 +15,27 @@ public class TradesClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     Image whiteArrow;
 
-    Tweener arrowFill;
+    Tweener arrowFill, arrowDefill;
 
-    public void Awake() {
-        
-    }
-
-    public void OnEnable()
+    public void Awake()
     {
         whiteArrow = transform.Find("White Arrow").gameObject.GetComponent<Image>();
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        arrowDefill?.Kill();
         arrowFill = whiteArrow.DOFillAmount(1, 1).SetEase(Ease.InQuad);
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        arrowFill.Kill();
+        arrowFill?.Kill();
         if (whiteArrow.fillAmount != 1) { 
-            whiteArrow.DOFillAmount(0, 0.5f).SetEase(Ease.Linear);
+            arrowDefill = whiteArrow.DOFillAmount(0, 0.5f).SetEase(Ease.Linear);
         } else {
             OnTradesClick?.Invoke(this);
-            whiteArrow.DOFillAmount(0, 0);
+            arrowDefill = whiteArrow.DOFillAmount(0, 0);
         }
     }
 }
