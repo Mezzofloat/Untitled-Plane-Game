@@ -27,7 +27,7 @@ public class PlayerTalk : MonoBehaviour
         isSpeechSetting = false;
     }
     
-    void OnTalk() {
+    void OnInteract() {
         if (npcs.Count == 0) return;
         
         talkToMe = npcs[0];
