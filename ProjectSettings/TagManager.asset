@@ -10,6 +10,7 @@ TagManager:
   - Shell
   - Box
   - Ignore Destroy
+  - Crafting Table
   layers:
   - Default
   - TransparentFX
