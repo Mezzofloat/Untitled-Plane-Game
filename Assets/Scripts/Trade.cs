@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,14 +6,20 @@ using UnityEngine;
 [System.Serializable]
 public class Trade
 {
-    public string input;
-    public string output;
+    public int inputAmount;
+    public int outputAmount;
 
-    public Trade(string Input, string Output) {
-        input = Input;
-        output = Output;
+    public string inputItem;
+    public string outputItem;
+
+    public Trade(int InputAmount, string InputItem, int OutputAmount, string OutputItem) {
+        inputAmount = InputAmount;
+        inputItem = InputItem;
+
+        outputAmount = OutputAmount;
+        outputItem = OutputItem;
     }
-    public override string ToString() => $"{input} for {output}";
+    public override string ToString() => $"{inputAmount} {inputItem} for {outputAmount} {outputItem}";
 
     public override bool Equals(object obj)
     {
@@ -31,11 +38,11 @@ public class Trade
             return false;
         }
     
-        return input.Equals(obj.input) && output.Equals(obj.output);
+        return inputAmount.Equals(obj.inputAmount) && inputItem.Equals(obj.outputItem) && outputAmount.Equals(obj.outputAmount) && outputItem.Equals(obj.outputItem);
     }
 
     public override int GetHashCode()
     {
-        return input.GetHashCode() ^ (output.GetHashCode() << 1);
+        return inputAmount * inputItem.GetHashCode() ^ (outputAmount * outputItem.GetHashCode() << 1);
     }
 }

@@ -21,8 +21,8 @@ public class PlayerTrade : MonoBehaviour
             var obj = Instantiate(tradeUnit, tradeWrapper.transform);
             var objTexts = obj.GetComponentsInChildren<TextMeshProUGUI>();
             
-            objTexts[0].text = trade.input;
-            objTexts[1].text = trade.output;
+            objTexts[0].text = trade.inputAmount + " " + trade.inputItem;
+            objTexts[1].text = trade.outputAmount + " " + trade.outputItem;
             
             if (obj != null) obj.transform.position += Vector3.up * y;
             y -= 120;
