@@ -6,20 +6,11 @@ using UnityEngine.UI;
 public class ShowMap : MonoBehaviour
 {
     [SerializeField] GameObject map;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Transform plane, player;
 
     void OnMap() {
-        map.SetActive(!map.activeSelf);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if ((plane.position - player.position).sqrMagnitude < 3) {
+            map.SetActive(!map.activeSelf);
+        }
     }
 }
