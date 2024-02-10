@@ -43,16 +43,13 @@ public class PlayerTalk : MonoBehaviour
         if (isSpeechSetting) {
             speech.text = speechText;
             isSpeechSetting = false;
-        } else if (talkUI.activeSelf) {
-            talkUI.SetActive(false);
-        } 
-        
-        if ((talkToMe.position - transform.position).sqrMagnitude < 1f) {          
+        } else if ((talkToMe.position - transform.position).sqrMagnitude < 1f) {          
             pt.OnTrade(talkToMe.gameObject, true);
             speech.text = "";
             StartCoroutine(nameof(SetSpeech));
-        } else {
+        } else if (talkUI.activeSelf) {
             pt.OnTrade(talkToMe.gameObject, false);
-        }
+            talkUI.SetActive(false);
+        } 
     }
 }
