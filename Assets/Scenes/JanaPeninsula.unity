@@ -3793,7 +3793,7 @@ GameObject:
   - component: {fileID: 1600269987}
   - component: {fileID: 1600269986}
   m_Layer: 0
-  m_Name: Ground
+  m_Name: Peninsula
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75994,7 +75994,7 @@ GameObject:
   - component: {fileID: 1631754652}
   - component: {fileID: 1631754656}
   m_Layer: 0
-  m_Name: Peninsula
+  m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
