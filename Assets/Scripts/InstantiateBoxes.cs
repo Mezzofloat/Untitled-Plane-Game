@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InstantiateBoxes : MonoBehaviour
 {
-    [SerializeField] int boxNumber;
+    [SerializeField] [Range(1,4)] int boxNumber;
     [SerializeField] GameObject box, plane;
 
     void Awake()

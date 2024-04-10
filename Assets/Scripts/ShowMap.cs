@@ -9,8 +9,10 @@ public class ShowMap : MonoBehaviour
     [SerializeField] Transform plane, player;
 
     void OnMap() {
-        if ((plane.position - player.position).sqrMagnitude < 3) {
-            map.SetActive(!map.activeSelf);
+        if ((plane.position - player.position).sqrMagnitude < 3 && map.activeSelf == false) {
+            map.SetActive(true);
+        } else {
+            map.SetActive(false);
         }
     }
 }
