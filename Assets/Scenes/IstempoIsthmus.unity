@@ -2069,6 +2069,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: 264179919}
+  plane: {fileID: 1413687529}
+  player: {fileID: 1450969055}
 --- !u!4 &1357804638
 Transform:
   m_ObjectHideFlags: 0
