@@ -285,7 +285,7 @@ RectTransform:
   m_GameObject: {fileID: 132736863}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.78999, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1400396115}
@@ -294,7 +294,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -83.079956, y: 27}
+  m_AnchoredPosition: {x: 15, y: -89}
   m_SizeDelta: {x: 166.16, y: 97.1418}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &132736865
@@ -696,7 +696,7 @@ RectTransform:
   m_GameObject: {fileID: 224514508}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9006, y: 0.83, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 34366877}
@@ -705,7 +705,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 353, y: -363}
+  m_AnchoredPosition: {x: 212, y: -290}
   m_SizeDelta: {x: 215.38, y: 122.6495}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &224514510
@@ -819,7 +819,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &363618428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -840,7 +840,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 808225314461906819, guid: faa1d40741fa3bd4082c779ad814a939, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93911f62ce3ecdc42abbcba2e175f462, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1024,8 +1024,8 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: 684
-        y: 844
+        x: 708.0824
+        y: 694.31006
         z: 0.23000336
       TangentIn:
         x: 0
@@ -1042,8 +1042,8 @@ MonoBehaviour:
           z: 0.666204
           w: -0.23698948
     - Position:
-        x: 296.29993
-        y: 938.00006
+        x: 202.9477
+        y: 759.31006
         z: 0.23000336
       TangentIn:
         x: 0
@@ -1060,8 +1060,8 @@ MonoBehaviour:
           z: -0.41320693
           w: 0.5738119
     - Position:
-        x: -315.70007
-        y: 296.00006
+        x: -311.1614
+        y: 245.31006
         z: 0.23000336
       TangentIn:
         x: 0
@@ -1073,10 +1073,10 @@ MonoBehaviour:
         z: 0
       Rotation:
         value:
-          x: 0.6658971
-          y: -0.23786779
-          z: -0.23786779
-          w: 0.6658971
+          x: 0.6919771
+          y: -0.14549133
+          z: -0.14549133
+          w: 0.6919771
     m_MetaData:
     - Mode: 3
       Tension: 0.5
@@ -1257,7 +1257,7 @@ RectTransform:
   m_GameObject: {fileID: 529099155}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.78999, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2134130285}
@@ -1266,7 +1266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 580, y: 52}
+  m_AnchoredPosition: {x: 455, y: 24}
   m_SizeDelta: {x: 170.0741, y: 99.428}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529099157
@@ -38681,8 +38681,8 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: 684
-        y: 844
+        x: 565.2999
+        y: 853
         z: 0.23000336
       TangentIn:
         x: 0
@@ -38699,26 +38699,26 @@ MonoBehaviour:
           z: 0.666204
           w: -0.23698948
     - Position:
-        x: 369.29993
-        y: 977
+        x: 405.29993
+        y: 979
         z: 0.23000336
       TangentIn:
         x: 0
         y: 0
-        z: -193.25894
+        z: -137.61179
       TangentOut:
         x: 0
         y: 0
         z: 359.55115
       Rotation:
         value:
-          x: 0.51277834
-          y: -0.48688635
-          z: -0.48689795
-          w: 0.5127675
+          x: -0.46027726
+          y: 0.5367913
+          z: 0.53680223
+          w: -0.46026433
     - Position:
-        x: 0.29992676
-        y: 880
+        x: 37.299927
+        y: 891
         z: 0.23000336
       TangentIn:
         x: 0
@@ -38893,7 +38893,7 @@ RectTransform:
   m_GameObject: {fileID: 955819388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.77999, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1952970545}
@@ -38902,7 +38902,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -803, y: -463.69}
+  m_AnchoredPosition: {x: -643, y: -336}
   m_SizeDelta: {x: 161.24, y: 105.5627}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &955819390
@@ -39325,8 +39325,8 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: 684
-        y: 844
+        x: 363.51355
+        y: 826.67444
         z: 0.23000336
       TangentIn:
         x: 0
@@ -39343,8 +39343,8 @@ MonoBehaviour:
           z: 0.666204
           w: -0.23698948
     - Position:
-        x: 313
-        y: 917
+        x: 79.047485
+        y: 854.67444
         z: 0.23000336
       TangentIn:
         x: 0
@@ -39361,8 +39361,8 @@ MonoBehaviour:
           z: -0.41320693
           w: 0.5738119
     - Position:
-        x: -260
-        y: 406
+        x: -308.33115
+        y: 446.67444
         z: 0.23000336
       TangentIn:
         x: 0
@@ -39831,7 +39831,7 @@ RectTransform:
   m_GameObject: {fileID: 1499482709}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.03, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 409310659}
@@ -39840,7 +39840,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -743, y: -178.32556}
+  m_AnchoredPosition: {x: -486, y: -197}
   m_SizeDelta: {x: 115.5991, y: 106.8655}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1499482711
@@ -40077,9 +40077,9 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: 684
-        y: 844
-        z: 0.23000336
+        x: 713.4601
+        y: 835.99994
+        z: 0.23001099
       TangentIn:
         x: 0
         y: 0
@@ -40090,10 +40090,10 @@ MonoBehaviour:
         z: 28.823797
       Rotation:
         value:
-          x: 0.5746095
-          y: 0.41210923
+          x: 0.57460946
+          y: 0.4121092
           z: 0.4120913
-          w: 0.5746049
+          w: 0.5746048
     - Position:
         x: 822.2999
         y: 766
@@ -40288,9 +40288,9 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: 684
-        y: 844
-        z: 0.23000336
+        x: 736.69775
+        y: 806.10846
+        z: 0.23001099
       TangentIn:
         x: 0
         y: 0
@@ -40302,13 +40302,13 @@ MonoBehaviour:
       Rotation:
         value:
           x: 0.6706248
-          y: -0.2242243
+          y: -0.22422428
           z: -0.22424075
-          w: 0.67059827
+          w: 0.6705982
     - Position:
-        x: 592.2999
-        y: 614
-        z: 0.23000336
+        x: 646.7577
+        y: 604.9036
+        z: 0.23001099
       TangentIn:
         x: 0
         y: 0
@@ -40320,13 +40320,13 @@ MonoBehaviour:
       Rotation:
         value:
           x: 0.7048677
-          y: -0.05622802
-          z: -0.05624185
+          y: -0.056228
+          z: -0.056241862
           w: 0.7048665
     - Position:
-        x: 589.2999
-        y: 220
-        z: 0.23000336
+        x: 673.4066
+        y: 222.97592
+        z: 0.23001099
       TangentIn:
         x: 0
         y: 0
@@ -40337,10 +40337,10 @@ MonoBehaviour:
         z: 0
       Rotation:
         value:
-          x: 0.6658971
-          y: -0.23786779
-          z: -0.23786779
-          w: 0.6658971
+          x: 0.6669769
+          y: 0.234823
+          z: 0.234823
+          w: 0.6669769
     m_MetaData:
     - Mode: 3
       Tension: 0.5
@@ -40499,9 +40499,9 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: 677.2999
-        y: 834
-        z: 0.23000336
+        x: 588.36163
+        y: 902.99994
+        z: 0.23001099
       TangentIn:
         x: 0
         y: 0
@@ -40515,11 +40515,11 @@ MonoBehaviour:
           x: 0.5848952
           y: -0.3973763
           z: -0.39738438
-          w: 0.58487207
+          w: 0.5848721
     - Position:
-        x: 484.29993
-        y: 755
-        z: 0.23000336
+        x: 383.29572
+        y: 827.99994
+        z: 0.23001099
       TangentIn:
         x: 0
         y: 0
@@ -40535,9 +40535,9 @@ MonoBehaviour:
           z: -0.36079657
           w: 0.6081337
     - Position:
-        x: 410.29993
-        y: 593
-        z: 0.23000336
+        x: 264.30682
+        y: 687.99994
+        z: 0.23001099
       TangentIn:
         x: 0
         y: 0
@@ -40607,7 +40607,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -447, y: 163}
+  m_AnchoredPosition: {x: -361, y: 135}
   m_SizeDelta: {x: 142.8373, y: 105.4267}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1698988037
@@ -40866,7 +40866,7 @@ RectTransform:
   m_GameObject: {fileID: 1810982300}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.79001, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1233346064}
@@ -40875,7 +40875,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 651, y: 438.29004}
+  m_AnchoredPosition: {x: 523, y: 349}
   m_SizeDelta: {x: 175.7645, y: 102.7547}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1810982302
@@ -41330,8 +41330,8 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: 684
-        y: 844
+        x: 707.2548
+        y: 892.29004
         z: 0.23000336
       TangentIn:
         x: 0
@@ -41343,13 +41343,13 @@ MonoBehaviour:
         z: 28.823797
       Rotation:
         value:
-          x: 0.38957354
-          y: 0.59012073
-          z: 0.59010214
-          w: 0.38957596
+          x: 0.38957396
+          y: 0.59012043
+          z: 0.5901024
+          w: 0.38957566
     - Position:
-        x: 914.30005
-        y: 903
+        x: 966.7452
+        y: 964.29004
         z: 0.23000336
       TangentIn:
         x: 0
@@ -41366,8 +41366,8 @@ MonoBehaviour:
           z: 0.54013795
           w: 0.45634526
     - Position:
-        x: 1253.3
-        y: 945
+        x: 1242.6912
+        y: 990.29004
         z: 0.23000336
       TangentIn:
         x: 0
