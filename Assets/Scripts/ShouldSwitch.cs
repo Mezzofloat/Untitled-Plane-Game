@@ -8,7 +8,6 @@ public class ShouldSwitch : MonoBehaviour
 
     float randomTime;
 
-    // Start is called before the first frame update
     void Awake()
     {
         randomTime = Random.Range(10f,20f);
@@ -16,7 +15,5 @@ public class ShouldSwitch : MonoBehaviour
         Invoke("EnableOnSwitch", randomTime);
     }
 
-    void EnableOnSwitch() {
-        shouldSwitch.SetActive(true);
-    }
+    void EnableOnSwitch() => shouldSwitch.SetActive(true);
 }
