@@ -494,6 +494,15 @@ MonoBehaviour:
   map: {fileID: 1428596371}
   plane: {fileID: 695379472}
   player: {fileID: 1812171071}
+  animationSprites:
+  - {fileID: 21300000, guid: ba66ad0a962b22940823057b1ceac9bf, type: 3}
+  - {fileID: 21300000, guid: 46f3be1cb744238458d83d02fde000f2, type: 3}
+  - {fileID: 21300000, guid: dcdeb3b80b6df4f4daaae9813f9f7851, type: 3}
+  - {fileID: 21300000, guid: 0c240c54eecf45844b877a677bcdc6ee, type: 3}
+  - {fileID: 21300000, guid: f11ba342335068f46aba17bc05c5b02c, type: 3}
+  - {fileID: 21300000, guid: 4aee5ed7d20cf0845816ad704bf56209, type: 3}
+  waitTime: 0.075
+  delayedWaitTime: 0.15
 --- !u!4 &185832435
 Transform:
   m_ObjectHideFlags: 0
