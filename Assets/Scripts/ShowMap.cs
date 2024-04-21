@@ -32,11 +32,13 @@ public class ShowMap : MonoBehaviour
 
         foreach (Transform child in map.transform) {
             child.gameObject.SetActive(false);
+
+            child.GetChild(1).gameObject.SetActive(false);
         }
 
         if (isOpening) {
             for (int i = 0; i < animationSprites.Count; i++) {
-                if (i == 2) {
+                if (i == 3) {
                     yield return new WaitForSeconds(delayedWaitTime);
                 }
 
