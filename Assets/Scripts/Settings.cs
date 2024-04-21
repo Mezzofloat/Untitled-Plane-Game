@@ -6,4 +6,5 @@ public class Settings : MonoBehaviour
 {
     public static float Volume;
     public static bool BirdDetectorAsBiggerCamera;
+    public static bool SimplerLanguage;
 }
