@@ -38,13 +38,8 @@ public class MovePlayer : MonoBehaviour
         yInput = new Vector3(0, input.y);
 
         prevPosition = transform.position;
-        if (!Physics2D.Raycast(transform.position + new Vector3(-0.5f * transform.localScale.x, 0), yInput, 1.3f) && 
-            !Physics2D.Raycast(transform.position + new Vector3(0.5f * transform.localScale.x, 0), yInput, 1.3f)) {
-            transform.Translate(yInput * speed * Time.deltaTime);
-        }
-        if (!Physics2D.Raycast(transform.position + new Vector3(0, -0.5f * transform.localScale.y), xInput, 1.3f) && 
-            !Physics2D.Raycast(transform.position + new Vector3(0, 0.5f * transform.localScale.y), xInput, 1.3f)) {
-            transform.Translate(xInput * speed * Time.deltaTime);
-        }
+
+        transform.Translate(yInput * speed * Time.deltaTime);
+        transform.Translate(xInput * speed * Time.deltaTime);
     }
 }
