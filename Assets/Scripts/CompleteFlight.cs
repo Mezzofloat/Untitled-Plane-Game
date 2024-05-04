@@ -5,15 +5,21 @@ using UnityEngine.SceneManagement;
 using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class CompleteFlight : MonoBehaviour
 {
     [SerializeField] Transform plane;
+    [SerializeField] Slider progressBar;
     
     public static int timeInSeconds { private get; set; } = 15;
     public static string destination { private get; set; } = "JanaPeninsula";
 
-    void Start() => Invoke("End", 5);
+    void Start() => Invoke("End", timeInSeconds);
+
+    void Update() {
+        progressBar.value = Mathf.Clamp01(Time.timeSinceLevelLoad / timeInSeconds);
+    }
 
     void End()
     {
