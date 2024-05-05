@@ -1318,7 +1318,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &458792001
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4358,6 +4358,7 @@ MonoBehaviour:
   tradeUnit: {fileID: 9016465236937050834, guid: 68e0f7f7a3937604687f1a38a6c97276, type: 3}
   tradeWrapper: {fileID: 458792000}
   yDecrease: 200
+  initYDecrease: 162
 --- !u!95 &1472137581
 Animator:
   serializedVersion: 5
