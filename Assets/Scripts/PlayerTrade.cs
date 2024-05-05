@@ -7,6 +7,9 @@ using TMPro;
 public class PlayerTrade : MonoBehaviour
 {
     [SerializeField] GameObject tradeUnit, tradeWrapper;
+    [Space]
+    [SerializeField] float yDecrease;
+    [SerializeField] float initYDecrease = 162;
 
     float y;
 
@@ -17,15 +20,18 @@ public class PlayerTrade : MonoBehaviour
 
         tradeWrapper.SetActive(enab);
 
+        y -= initYDecrease;
+
         foreach (Trade trade in ttf.Trades) {
-            var obj = Instantiate(tradeUnit, tradeWrapper.transform);
+            GameObject obj = Instantiate(tradeUnit, tradeWrapper.transform, false);
             var objTexts = obj.GetComponentsInChildren<TextMeshProUGUI>();
             
             objTexts[0].text = trade.inputAmount + " " + trade.inputItem;
             objTexts[1].text = trade.outputAmount + " " + trade.outputItem;
             
             if (obj != null) obj.transform.position += Vector3.up * y;
-            y -= 120;
+
+            y -= yDecrease;
         }
     }
 
