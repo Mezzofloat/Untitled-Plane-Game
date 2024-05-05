@@ -9,11 +9,6 @@ public class BoxOnTarget : MonoBehaviour
     #nullable enable
     Transform? boxOnTarget;
 
-    void OnEnable()
-    {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-    }
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag.Equals("Box")) {
