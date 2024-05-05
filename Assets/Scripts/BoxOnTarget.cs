@@ -20,7 +20,7 @@ public class BoxOnTarget : MonoBehaviour
     }
 
     IEnumerator EndBox() {
-        while ( (boxOnTarget.position - transform.position).sqrMagnitude >= 0.25f ) {
+        while ( boxOnTarget == null || (boxOnTarget.position - transform.position).sqrMagnitude >= 0.25f ) {
             yield return null;
         }
 
@@ -29,6 +29,7 @@ public class BoxOnTarget : MonoBehaviour
         boxOnTarget.DORotate(Vector3.zero, timeToEnd);
         boxOnTarget.DOMove(transform.position, timeToEnd).SetEase(Ease.OutSine);
         boxEnded.Invoke();
+        gameObject.SetActive(false);
     }
 
     void OnTriggerExit2D(Collider2D other)

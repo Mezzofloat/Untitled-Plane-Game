@@ -5,33 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class FragilityGame : MonoBehaviour
 {
-    [SerializeField] GameObject plane;
-    [SerializeField] Transform[] targets;
+    [SerializeField] InstantiateBoxes ib;
+    [SerializeField] List<GameObject> targets = new();
 
-    bool areWeDoneYet;
+    int dones;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        for (int i = 0; i < GameObject.FindGameObjectsWithTag("Box").Length; i++) {
-            targets[i].gameObject.SetActive(true);
+    void Start() {
+        for (int i = 0; i < ib.boxNumber; i++) {
+            targets[i].SetActive(true);
         }
     }
 
-    void Update()
-    {
-        foreach (Transform target in targets) {
-            if (!target.gameObject.activeSelf) {
-                areWeDoneYet = true;
-            } else {
-                areWeDoneYet = false;
-                break;
-            }
-        }
-        
-        if (areWeDoneYet) {
-            StartCoroutine(EndBreaking());
-        }
+    public void FindWhenEnded() {
+        dones++;
+        if (dones >= ib.boxNumber) StartCoroutine(nameof(EndBreaking));
     }
 
     IEnumerator EndBreaking() {
