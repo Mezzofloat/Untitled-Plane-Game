@@ -345,6 +345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8723ff6f17e6d2f4789dfbedb87b3238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCam: {fileID: 519420031}
+  zoomTime: 0.5
 --- !u!95 &98119360
 Animator:
   serializedVersion: 5
@@ -1154,7 +1156,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1190402884}
-  - component: {fileID: 1190402883}
   - component: {fileID: 1190402885}
   m_Layer: 0
   m_Name: SwitchManager
@@ -1163,18 +1164,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1190402883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190402882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8723ff6f17e6d2f4789dfbedb87b3238, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1190402884
 Transform:
   m_ObjectHideFlags: 0
@@ -1618,10 +1607,10 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 1190402884}
-  - {fileID: 712078001}
   - {fileID: 1023740453}
   - {fileID: 144823662}
   - {fileID: 405930085}
   - {fileID: 98119357}
   - {fileID: 201451134}
+  - {fileID: 712078001}
+  - {fileID: 1190402884}
