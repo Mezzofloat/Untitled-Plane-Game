@@ -5,18 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class FragilityGame : MonoBehaviour
 {
-    [SerializeField] InstantiateBoxes ib;
+    InstantiateBoxes ib;
     [SerializeField] List<GameObject> targets = new();
 
     int dones;
 
-    void Start() {
+    public void ActivateTargets() {
+        ib = GetComponent<InstantiateBoxes>();
         for (int i = 0; i < ib.boxNumber; i++) {
             targets[i].SetActive(true);
         }
     }
 
-    public void FindWhenEnded() {
+    public void DetermineWhenEnded() {
         dones++;
         if (dones >= ib.boxNumber) StartCoroutine(nameof(EndBreaking));
     }

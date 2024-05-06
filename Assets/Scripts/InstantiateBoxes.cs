@@ -7,7 +7,7 @@ public class InstantiateBoxes : MonoBehaviour
     [Range(1,4)] public int boxNumber;
     [SerializeField] GameObject box, plane;
 
-    void Awake()
+    public void MakeBoxes()
     {
         float maxX = plane.GetComponent<BoxCollider2D>().size.x * plane.transform.localScale.x / 2 - box.transform.localScale.x;
         float maxY = plane.GetComponent<BoxCollider2D>().size.y * plane.transform.localScale.y / 2 - box.transform.localScale.y;

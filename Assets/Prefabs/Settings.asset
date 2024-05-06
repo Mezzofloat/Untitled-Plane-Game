@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a8eb6bf6cf4b54baf38e71cb42aa02, type: 3}
   m_Name: Settings
   m_EditorClassIdentifier: 
+  Volume: 0
+  BirdDetectorAsBiggerCamera: 0
+  SimplerLanguage: 0
