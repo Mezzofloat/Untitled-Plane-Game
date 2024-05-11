@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SwitchFlightModeBreaking : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    bool insideBox;
+
+    void OnSwitch() {
+        if (insideBox) {
+            SceneManager.LoadScene("InFlight");
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.CompareTag("Player")) {
+            insideBox = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other) {
+        if (other.gameObject.CompareTag("Player")) {
+            insideBox = false;
+        }
     }
 }
