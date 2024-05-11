@@ -5,7 +5,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SwitchFlightMode : MonoBehaviour
+public class SwitchFlightModeFlight : MonoBehaviour
 {
     [SerializeField] Camera mainCam;
     [SerializeField] float zoomTime;
