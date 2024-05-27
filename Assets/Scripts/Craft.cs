@@ -18,8 +18,6 @@ public class Craft : MonoBehaviour
             if ((table.position - transform.position).sqrMagnitude < (nearestCraftingTable.position - transform.position).sqrMagnitude) 
                 nearestCraftingTable = table;
         }
-
-        Debug.Log("got here!");
     }
 
     void OnTrade(GameObject tradingNPC, bool enab) {
