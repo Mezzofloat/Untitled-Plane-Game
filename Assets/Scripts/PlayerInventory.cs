@@ -11,13 +11,13 @@ public class PlayerInventory : MonoBehaviour
 
     [SerializeField] GameObject shell, pearl;
 
-    public float reachDistance { get; }
-    public UnityEvent<Vector3> Pickup;
+    public static float reachDistance { get; } = 3;
+    public static UnityEvent<Vector3> Pickup = new();
     
     int shellsInInventory;
     int pearlsInInventory;
 
-    Dictionary<string, int> generalInventory;
+    static Dictionary<string, int> generalInventory = new();
 
     void Awake() {
         TradesClick.OnTradesClick += Trade;
@@ -26,45 +26,12 @@ public class PlayerInventory : MonoBehaviour
     // Start is called before the first frame update
     void OnPickup()
     {
+        Debug.Log("pickup initiated");
         Pickup?.Invoke(transform.position);
-
-        /*
-        foreach (var item in ItemOnGround.Items) {
-            float sqrDistance = (transform.position - item.gameObject.transform.position).sqrMagnitude;
-            if (sqrDistance <= reachDistance * reachDistance) {
-                shellsInInventory++;
-                shellsInventory.text = shellsInInventory.ToString();
-
-                //Destroy(SpawnValuables.shells[i].gameObject);
-                //SpawnValuables.shells.RemoveAt(i);
-            }
-        }
-
-        for (int i = 0; i < SpawnValuables.shells.Count; i++) {
-            float sqrDistance = (transform.position - SpawnValuables.shells[i].position).sqrMagnitude;
-            if (sqrDistance <= reachDistance * reachDistance) {
-                shellsInInventory++;
-                shellsInventory.text = shellsInInventory.ToString();
-
-                Destroy(SpawnValuables.shells[i].gameObject);
-                SpawnValuables.shells.RemoveAt(i);
-            }
-        }
-        
-        for (int i = 0; i < SpawnValuables.pearls.Count; i++) {
-            float sqrDistance = (transform.position - SpawnValuables.pearls[i].position).sqrMagnitude;
-            if (sqrDistance <= reachDistance * reachDistance) {
-                pearlsInInventory++;
-                pearlsInventory.text = pearlsInInventory.ToString();
-
-                Destroy(SpawnValuables.pearls[i].gameObject);
-                SpawnValuables.pearls.RemoveAt(i);
-            }
-        }
-        */
     }
 
-    public void AddOrIncreaseItemCount(string key) {
+    public static void AddOrIncreaseItemCount(string key) {
+        print("function AddOrIncrease invoked");
         if (!generalInventory.TryAdd(key, 1)) {
             generalInventory[key]++;
         }

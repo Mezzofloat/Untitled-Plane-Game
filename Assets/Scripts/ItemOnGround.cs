@@ -5,23 +5,24 @@ using UnityEngine.UIElements;
 
 public class ItemOnGround : MonoBehaviour
 {
-    [SerializeField] PlayerInventory pi;
     [SerializeField] string itemNameAllLowercase;
 
     void TakeObject(Vector3 player) {
-        if ((player - transform.position).sqrMagnitude <= pi.reachDistance) {
-            pi.AddOrIncreaseItemCount(itemNameAllLowercase);
-            pi.Pickup.RemoveListener(this.TakeObject);
-            Destroy(this);
+        print("TakeObject invoked");
+        if ((player - transform.position).sqrMagnitude <= PlayerInventory.reachDistance) {
+            print("if statement breached successfully");
+            PlayerInventory.AddOrIncreaseItemCount(itemNameAllLowercase);
+            PlayerInventory.Pickup.RemoveListener(this.TakeObject);
+            Destroy(gameObject);
         }
     }
 
     void OnEnable() {
-        pi.Pickup.AddListener(this.TakeObject);
+        PlayerInventory.Pickup.AddListener(this.TakeObject);
     }
 
     void OnDisable() {
-        pi.Pickup.RemoveListener(this.TakeObject);
+        PlayerInventory.Pickup.RemoveListener(this.TakeObject);
     }
 
     // Update is called once per frame
