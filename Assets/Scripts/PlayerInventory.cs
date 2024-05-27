@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class PlayerInventory : MonoBehaviour
 {
     [SerializeField] TMP_Text shellsInventory;
     [SerializeField] TMP_Text pearlsInventory;
 
-    [SerializeField] float reachDistance;
     [SerializeField] GameObject shell, pearl;
+
+    public float reachDistance { get; }
+    public UnityEvent<Vector3> Pickup;
     
     int shellsInInventory;
     int pearlsInInventory;
+
+    Dictionary<string, int> generalInventory;
 
     void Awake() {
         TradesClick.OnTradesClick += Trade;
@@ -21,6 +26,20 @@ public class PlayerInventory : MonoBehaviour
     // Start is called before the first frame update
     void OnPickup()
     {
+        Pickup?.Invoke(transform.position);
+
+        /*
+        foreach (var item in ItemOnGround.Items) {
+            float sqrDistance = (transform.position - item.gameObject.transform.position).sqrMagnitude;
+            if (sqrDistance <= reachDistance * reachDistance) {
+                shellsInInventory++;
+                shellsInventory.text = shellsInInventory.ToString();
+
+                //Destroy(SpawnValuables.shells[i].gameObject);
+                //SpawnValuables.shells.RemoveAt(i);
+            }
+        }
+
         for (int i = 0; i < SpawnValuables.shells.Count; i++) {
             float sqrDistance = (transform.position - SpawnValuables.shells[i].position).sqrMagnitude;
             if (sqrDistance <= reachDistance * reachDistance) {
@@ -41,6 +60,13 @@ public class PlayerInventory : MonoBehaviour
                 Destroy(SpawnValuables.pearls[i].gameObject);
                 SpawnValuables.pearls.RemoveAt(i);
             }
+        }
+        */
+    }
+
+    public void AddOrIncreaseItemCount(string key) {
+        if (!generalInventory.TryAdd(key, 1)) {
+            generalInventory[key]++;
         }
     }
 
