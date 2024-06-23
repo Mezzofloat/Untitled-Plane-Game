@@ -6,15 +6,12 @@ using Unity.VisualScripting;
 
 public class StartingCutscene : MonoBehaviour
 {
-    [SerializeField] float xPos;
-    [SerializeField] float duration;
-    [Space(20)]
-    [SerializeField] CameraMove cameraToBeMoved;
-    [SerializeField] Transform plane;
+    [SerializeField] CameraMove cameraMove;
+    [SerializeField] Transform plane, runway;
 
-    void Awake()
-    {
-        cameraToBeMoved.ToFollow = plane;
-        plane.DOMoveX(xPos, duration).SetEase(Ease.OutSine).OnComplete(() => cameraToBeMoved.ChangeToPlayer());
+    void Start() {
+        Vector3 endVal = new Vector3(runway.position.x, runway.position.y, -10);
+        cameraMove.ChangeToSpline(cameraMove.transform.DOMove(endVal, 2));
+        plane.DOMove(runway.position, 2).OnComplete(() => cameraMove.ChangeToPlayer());
     }
 }
