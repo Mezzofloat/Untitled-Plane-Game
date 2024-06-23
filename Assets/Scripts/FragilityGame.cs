@@ -18,11 +18,10 @@ public class FragilityGame : MonoBehaviour
 
     public void FindWhenEnded() {
         dones++;
-        if (dones >= ib.boxNumber) StartCoroutine(nameof(EndBreaking));
+        if (dones >= ib.boxNumber) EndBreaking();
     }
 
-    IEnumerator EndBreaking() {
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("InFlight");
+    void EndBreaking() {
+        
     }
 }
