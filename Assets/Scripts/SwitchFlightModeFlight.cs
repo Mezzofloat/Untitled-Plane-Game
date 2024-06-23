@@ -7,31 +7,40 @@ using UnityEngine.SceneManagement;
 
 public class SwitchFlightModeFlight : MonoBehaviour
 {
-    [SerializeField] Camera mainCam;
-    [SerializeField] float zoomTime;
+    [SerializeField] GameObject flightFolder, breakingFolder;
+    [SerializeField] Camera mainCamera;
 
-    void Awake() {
-        
-    }
+    bool isinBreaking;
+    bool insideBox = true;
 
-    void OnSwitch()
-    {
-        SwitchToBreaking();
-    }
-
-    void SwitchToFlight() {
-        mainCam.orthographicSize = 0.01f;
-        mainCam.transform.position = transform.position;
-        mainCam.DOOrthoSize(5, zoomTime).SetEase(Ease.OutSine);
-        mainCam.transform.DOMove(new Vector3(0, 0, -10), zoomTime).OnComplete(() => 
-            SceneManager.LoadScene(1 - SceneManager.GetActiveScene().buildIndex)
-        );   
+    void OnSwitch() {
+        if (isinBreaking) SwitchToFlight();
+        else SwitchToBreaking();
     }
 
     void SwitchToBreaking() {
-        mainCam.DOOrthoSize(0.01f, zoomTime).SetEase(Ease.OutSine);
-        mainCam.transform.DOMove(transform.position, zoomTime).OnComplete(() =>
-            SceneManager.LoadScene(1 - SceneManager.GetActiveScene().buildIndex)
-        );
+        flightFolder.SetActive(false);
+        breakingFolder.SetActive(true);
+        isinBreaking = true;
+    }
+
+    void SwitchToFlight() {
+        if (insideBox) {
+            flightFolder.SetActive(true);
+            breakingFolder.SetActive(false);
+            isinBreaking = false;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.CompareTag("Player")) {
+            insideBox = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other) {
+        if (other.gameObject.CompareTag("Player")) {
+            insideBox = false;
+        }
     }
 }

@@ -1,0 +1,34 @@
+{
+    "name": "SwitchFlight",
+    "maps": [
+        {
+            "name": "Switch",
+            "id": "1770aaaf-1e62-4091-9d24-e49e93b8c5b9",
+            "actions": [
+                {
+                    "name": "Switch",
+                    "type": "Button",
+                    "id": "1a9b021b-6843-45bb-a790-7af9d6b2bb23",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f3b91d04-da5c-423c-97fb-c08eff271f85",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

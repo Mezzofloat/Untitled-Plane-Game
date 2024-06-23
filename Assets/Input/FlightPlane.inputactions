@@ -44,7 +44,7 @@
                 {
                     "name": "Switch",
                     "type": "Button",
-                    "id": "c4d7fe10-334e-4e29-bb0d-fcc08673cfe2",
+                    "id": "caa2d65c-997f-4366-a29b-ad042b191b7f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -115,17 +115,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "ResetBullets",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "76dafd56-ceaa-4c77-a150-9a3744de901b",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Switch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

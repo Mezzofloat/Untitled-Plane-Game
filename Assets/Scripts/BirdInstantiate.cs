@@ -22,7 +22,7 @@ public class BirdInstantiate : MonoBehaviour
             yRandom = Random.Range(-4.4f, 4.4f);
             tRandom = Random.Range(-0.1f,0.6f);
             instantiatePos = new Vector3(8.89f + bird.transform.localScale.x, yRandom, 0);
-            Instantiate(bird, instantiatePos, Quaternion.identity);
+            Instantiate(bird, instantiatePos, Quaternion.identity, transform.parent);
             yield return new WaitForSeconds(1 + tRandom);
         }
     }

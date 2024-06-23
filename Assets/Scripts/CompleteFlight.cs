@@ -12,7 +12,7 @@ public class CompleteFlight : MonoBehaviour
     [SerializeField] Transform plane;
     [SerializeField] Slider progressBar;
     
-    public static int timeInSeconds { private get; set; } = 15;
+    public static int timeInSeconds { private get; set; } = 60;
     public static string destination { private get; set; } = "JanaPeninsula";
 
     void Start() => Invoke("End", timeInSeconds);
