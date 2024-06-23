@@ -22618,7 +22618,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &126010408
 Animator:
   serializedVersion: 5
@@ -22726,7 +22726,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shellsInventory: {fileID: 618016426}
   pearlsInventory: {fileID: 1117568852}
-  reachDistance: 1.67
   shell: {fileID: 2190576162106085471, guid: 9b9a91829601be3469ac0fd25774e324, type: 3}
   pearl: {fileID: 6882023581689391706, guid: 7265d3eac8fc8454eb1215400653aa3a, type: 3}
 --- !u!114 &126010412
@@ -22867,7 +22866,7 @@ Transform:
   m_GameObject: {fileID: 126010407}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.69, y: 5, z: -0.03}
+  m_LocalPosition: {x: -6.7, y: 7.2, z: -0.03}
   m_LocalScale: {x: 1, y: 1, z: 2.27}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23092,7 +23091,7 @@ Transform:
   m_GameObject: {fileID: 166542021}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -52.8, y: 9.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23110,7 +23109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce53075bd0906ce43b5e9dc6f38f74fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ToFollow: {fileID: 126010417}
   player: {fileID: 126010417}
 --- !u!1 &196735401
 GameObject:
@@ -27335,10 +27333,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6508d992ea877fb43896680ee83ae687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xPos: -7
-  duration: 2
-  cameraToBeMoved: {fileID: 166542025}
+  cameraMove: {fileID: 166542025}
   plane: {fileID: 1482386418}
+  runway: {fileID: 1529873388}
+  player: {fileID: 126010407}
 --- !u!4 &1628770278
 Transform:
   m_ObjectHideFlags: 0
