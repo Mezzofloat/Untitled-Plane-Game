@@ -8,10 +8,14 @@ public class StartingCutscene : MonoBehaviour
 {
     [SerializeField] CameraMove cameraMove;
     [SerializeField] Transform plane, runway;
+    [SerializeField] GameObject player;
 
     void Start() {
         Vector3 endVal = new Vector3(runway.position.x, runway.position.y, -10);
         cameraMove.ChangeToSpline(cameraMove.transform.DOMove(endVal, 2));
-        plane.DOMove(runway.position, 2).OnComplete(() => cameraMove.ChangeToPlayer());
+        plane.DOMove(runway.position, 2).OnComplete(() => {
+            player.SetActive(true);
+            cameraMove.ChangeToPlayer();
+        });
     }
 }
