@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SwitchFlightModeBreaking : MonoBehaviour
 {
-    bool insideBox;
+    bool insideBox = true;
 
     void OnSwitch() {
         if (insideBox) {
