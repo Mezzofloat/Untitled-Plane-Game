@@ -11,23 +11,12 @@ public class ItemOnGround : MonoBehaviour
         print("TakeObject invoked");
         if ((player - transform.position).sqrMagnitude <= PlayerInventory.reachDistance) {
             print("if statement breached successfully");
-            PlayerInventory.AddOrIncreaseItemCount(itemNameAllLowercase);
+            PlayerInventory.AddItem(itemNameAllLowercase);
             PlayerInventory.Pickup.RemoveListener(this.TakeObject);
             Destroy(gameObject);
         }
     }
 
-    void OnEnable() {
-        PlayerInventory.Pickup.AddListener(this.TakeObject);
-    }
-
-    void OnDisable() {
-        PlayerInventory.Pickup.RemoveListener(this.TakeObject);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void OnEnable() => PlayerInventory.Pickup.AddListener(this.TakeObject);
+    void OnDisable() => PlayerInventory.Pickup.RemoveListener(this.TakeObject);
 }

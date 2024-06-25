@@ -3,24 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
+using Unity.VisualScripting;
 
 public class PlayerInventory : MonoBehaviour
 {
     [SerializeField] TMP_Text shellsInventory;
+    static TMP_Text _shellsInventoryText;
+
     [SerializeField] TMP_Text pearlsInventory;
+    static TMP_Text _pearlsInventoryText;
 
     [SerializeField] GameObject shell, pearl;
 
     public static float reachDistance { get; } = 3;
     public static UnityEvent<Vector3> Pickup = new();
     
-    int shellsInInventory;
-    int pearlsInInventory;
+    static int shellsInInventory;
+    static int pearlsInInventory;
 
-    static Dictionary<string, int> generalInventory = new();
+    static string[] generalInventory = new string[21];
 
     void Awake() {
         TradesClick.OnTradesClick += Trade;
+
+        _shellsInventoryText = shellsInventory;
+        _pearlsInventoryText = pearlsInventory;
     }
 
     // Start is called before the first frame update
@@ -30,10 +37,24 @@ public class PlayerInventory : MonoBehaviour
         Pickup?.Invoke(transform.position);
     }
 
-    public static void AddOrIncreaseItemCount(string key) {
-        print("function AddOrIncrease invoked");
-        if (!generalInventory.TryAdd(key, 1)) {
-            generalInventory[key]++;
+    public static void AddItem(string item) {
+        print("function AddItem invoked");
+
+        if (item == "shell") {
+            shellsInInventory++;
+            _shellsInventoryText.text = shellsInInventory.ToString();
+            return;
+        } else if (item == "pearl") {
+            pearlsInInventory++;
+            _pearlsInventoryText.text = pearlsInInventory.ToString();
+            return;
+        }
+
+        for (int i = 0; i < generalInventory.Length; i++) {
+            if (generalInventory[i] is null) {
+                generalInventory[i] = item;
+                return;
+            }
         }
     }
 

@@ -448,7 +448,7 @@ PrefabInstance:
     - target: {fileID: 701488897659727380, guid: f028c2afa848a034faf07572af0a5d73, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1472137583}
+      objectReference: {fileID: 0}
     - target: {fileID: 701488897659727380, guid: f028c2afa848a034faf07572af0a5d73, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Resume
@@ -4121,7 +4121,7 @@ GameObject:
   - component: {fileID: 1472137583}
   m_Layer: 2
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4394,8 +4394,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   craftingTables:
   - {fileID: 687437023}
-  tradeUnit: {fileID: 0}
-  tradeWrapper: {fileID: 0}
+  tradeUnit: {fileID: 9016465236937050834, guid: 68e0f7f7a3937604687f1a38a6c97276, type: 3}
+  tradeWrapper: {fileID: 286946358}
 --- !u!114 &1472137583
 MonoBehaviour:
   m_ObjectHideFlags: 0
