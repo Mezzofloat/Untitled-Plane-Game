@@ -29,9 +29,7 @@ public class PlaneDestroy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Rock"))
         {
-            health--;
-            hearts[^1].GetComponent<Animator>().SetTrigger("Explode");
-            hearts.RemoveAt(hearts.Count - 1);
+            OnPlaneHit();
         }
 
         if (health == 0)
@@ -46,5 +44,11 @@ public class PlaneDestroy : MonoBehaviour
     void DelayDestroy() {
         Destroy(gameObject);
         OnPlaneDestroy?.Invoke();
+    }
+
+    public void OnPlaneHit() {
+        health--;
+        hearts[^1].GetComponent<Animator>().SetTrigger("Explode");
+        hearts.RemoveAt(hearts.Count - 1);
     }
 }
