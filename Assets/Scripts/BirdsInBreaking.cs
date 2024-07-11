@@ -30,8 +30,7 @@ public class BirdsInBreaking : MonoBehaviour
         StartCoroutine(nameof(SpawnFakeBird));
     }
 
-    void OnDisable()
-    {
+    void OnDisable() {
         StopCoroutine(nameof(SpawnFakeBird));
     }
 }
