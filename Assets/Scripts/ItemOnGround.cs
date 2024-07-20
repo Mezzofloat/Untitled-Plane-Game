@@ -8,9 +8,7 @@ public class ItemOnGround : MonoBehaviour
     [SerializeField] string itemNameAllLowercase;
 
     void TakeObject(Vector3 player) {
-        print("TakeObject invoked");
         if ((player - transform.position).sqrMagnitude <= PlayerInventory.reachDistance) {
-            print("if statement breached successfully");
             PlayerInventory.AddItem(itemNameAllLowercase);
             PlayerInventory.Pickup.RemoveListener(this.TakeObject);
             Destroy(gameObject);

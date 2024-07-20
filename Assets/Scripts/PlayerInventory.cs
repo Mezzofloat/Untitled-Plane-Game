@@ -33,13 +33,10 @@ public class PlayerInventory : MonoBehaviour
     // Start is called before the first frame update
     void OnPickup()
     {
-        Debug.Log("pickup initiated");
         Pickup?.Invoke(transform.position);
     }
 
     public static void AddItem(string item) {
-        print("function AddItem invoked");
-
         if (item == "shell") {
             shellsInInventory++;
             _shellsInventoryText.text = shellsInInventory.ToString();
