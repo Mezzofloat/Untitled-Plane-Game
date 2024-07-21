@@ -21,7 +21,7 @@ public class PlayerInventory : MonoBehaviour
     static int shellsInInventory;
     static int pearlsInInventory;
 
-    static string[] generalInventory = new string[21];
+    static string[] generalInventory = new string[20];
 
     void Awake() {
         TradesClick.OnTradesClick += Trade;
