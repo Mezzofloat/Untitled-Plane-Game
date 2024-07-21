@@ -13,7 +13,7 @@ public class ShowMap : MonoBehaviour
 
     bool isOpening;
 
-    void OnMap() {
+    void OnInteract() {
         if ((plane.position - player.position).sqrMagnitude < 3 && !map.activeSelf) {
             map.SetActive(true);
             OpenClose();
