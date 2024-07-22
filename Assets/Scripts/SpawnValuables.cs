@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class SpawnValuables : MonoBehaviour
 {
-    [SerializeField] GameObject shell, pearl;
-    [SerializeField] int numShells, numPearls;
+    [SerializeField] GameObject shell, pearl, sand;
+    [SerializeField] int numShells, numPearls, numSand;
     [SerializeField] CompositeCollider2D tilemap;
 
     
     #nullable enable
     public static List<Transform> shells {get; set;} = new();
     public static List<Transform> pearls {get; set;} = new();
+    public static List<Transform> sands {get; set;} = new();
 
     // Dictionary<GameObject, (List<Transform>, int)> valuableDictionary = new() {
     //     { shell, (shells, numShells)},
@@ -25,9 +26,11 @@ public class SpawnValuables : MonoBehaviour
 
         shells = new List<Transform>();
         pearls = new List<Transform>();
+        sands = new List<Transform>();
 
         Spawn(shell, numShells);
         Spawn(pearl, numPearls);
+        Spawn(sand, numSand);
 
         tilemap.geometryType = CompositeCollider2D.GeometryType.Outlines;
     }
@@ -39,6 +42,7 @@ public class SpawnValuables : MonoBehaviour
 
         if (obj == pearl) objs = pearls;
         else if (obj == shell) objs = shells;
+        else if (obj == sand) objs = sands;
 
         for (int i = 0; i < num; i++) {
             x = Random.Range(-17f/2, 17f/2);

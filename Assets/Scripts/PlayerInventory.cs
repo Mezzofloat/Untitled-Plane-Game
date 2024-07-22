@@ -13,13 +13,17 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] TMP_Text pearlsInventory;
     static TMP_Text _pearlsInventoryText;
 
-    [SerializeField] GameObject shell, pearl;
+    [SerializeField] TMP_Text sandInventory;
+    static TMP_Text _sandInventoryText;
+
+    [SerializeField] GameObject shell, pearl, sand;
 
     public static float reachDistance { get; } = 3;
     public static UnityEvent<Vector3> Pickup = new();
     
     static int shellsInInventory;
     static int pearlsInInventory;
+    static int sandInInventory;
 
     static string[] generalInventory = new string[20];
 
@@ -28,6 +32,7 @@ public class PlayerInventory : MonoBehaviour
 
         _shellsInventoryText = shellsInventory;
         _pearlsInventoryText = pearlsInventory;
+        _sandInventoryText = sandInventory;
     }
 
     // Start is called before the first frame update
@@ -45,6 +50,9 @@ public class PlayerInventory : MonoBehaviour
             pearlsInInventory++;
             _pearlsInventoryText.text = pearlsInInventory.ToString();
             return;
+        } else if (item == "sand") {
+            sandInInventory++;
+            _sandInventoryText.text = sandInInventory.ToString();
         }
 
         for (int i = 0; i < generalInventory.Length; i++) {
@@ -68,6 +76,12 @@ public class PlayerInventory : MonoBehaviour
 
             GameObject newPearl = Instantiate(pearl, transform.position, transform.rotation);
             SpawnValuables.pearls.Add(newPearl.transform);
+        } else if (sandInInventory > 0) {
+            sandInInventory--;
+            sandInventory.text = sandInInventory.ToString();
+
+            GameObject newSand = Instantiate(sand, transform.position, transform.rotation);
+            SpawnValuables.sands.Add(newSand.transform);
         }
     }
 
