@@ -486,7 +486,7 @@ PrefabInstance:
     - target: {fileID: 701488897659727380, guid: f028c2afa848a034faf07572af0a5d73, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1472137583}
     - target: {fileID: 701488897659727380, guid: f028c2afa848a034faf07572af0a5d73, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Resume
@@ -1927,10 +1927,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 375347157}
-  - {fileID: 181510329}
   - {fileID: 1499417283}
   - {fileID: 1991559303}
   - {fileID: 1144422881}
+  - {fileID: 181510329}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2492,7 +2492,7 @@ MonoBehaviour:
   numShells: 13
   numPearls: 9
   numSand: 7
-  tilemap: {fileID: 1600269985}
+  tilemap: {fileID: 1631754655}
 --- !u!4 &744394241
 Transform:
   m_ObjectHideFlags: 0
