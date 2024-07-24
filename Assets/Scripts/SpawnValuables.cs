@@ -36,6 +36,9 @@ public class SpawnValuables : MonoBehaviour
     }
 
     void Spawn(GameObject obj, int num) {
+        
+        Bounds bounds = tilemap.bounds;
+        
         float x,y;
 
         List<Transform> objs = new();
@@ -45,8 +48,8 @@ public class SpawnValuables : MonoBehaviour
         else if (obj == sand) objs = sands;
 
         for (int i = 0; i < num; i++) {
-            x = Random.Range(-17f/2, 17f/2);
-            y = Random.Range(-9f/2, 9f/2);
+            x = Random.Range(bounds.min.x, bounds.max.x);
+            y = Random.Range(bounds.min.y, bounds.max.y);
             Vector3 position = new(x,y);
 
             if (tilemap.OverlapPoint(position)) {
