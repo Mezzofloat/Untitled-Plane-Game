@@ -38838,6 +38838,57 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &659517037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 659517039}
+  - component: {fileID: 659517038}
+  m_Layer: 0
+  m_Name: ValuablesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &659517038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659517037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48538efe2320bf048bdd3c545ee8c859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shell: {fileID: 2190576162106085471, guid: 9b9a91829601be3469ac0fd25774e324, type: 3}
+  pearl: {fileID: 6882023581689391706, guid: 7265d3eac8fc8454eb1215400653aa3a, type: 3}
+  sand: {fileID: 6882023581689391706, guid: ba22d7e679cdeff469a1934273b46122, type: 3}
+  numShells: 13
+  numPearls: 9
+  numSand: 7
+  tilemap: {fileID: 654245440}
+--- !u!4 &659517039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659517037}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &692896220
 GameObject:
   m_ObjectHideFlags: 0
@@ -43040,8 +43091,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shellsInventory: {fileID: 218639564}
   pearlsInventory: {fileID: 1313513308}
+  sandInventory: {fileID: 0}
   shell: {fileID: 2190576162106085471, guid: 9b9a91829601be3469ac0fd25774e324, type: 3}
   pearl: {fileID: 6882023581689391706, guid: 7265d3eac8fc8454eb1215400653aa3a, type: 3}
+  sand: {fileID: 0}
 --- !u!114 &7073504212129500891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43198,3 +43251,4 @@ SceneRoots:
   - {fileID: 1043292331}
   - {fileID: 9068449689368068665}
   - {fileID: 1958692411}
+  - {fileID: 659517039}
