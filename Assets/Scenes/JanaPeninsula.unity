@@ -341,6 +341,11 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &146028727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9172532099393600989, guid: 4fbad7ffbd94d61428000e2c9ceb274a, type: 3}
+  m_PrefabInstance: {fileID: 7292433127969109556}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &154923089
 GameObject:
   m_ObjectHideFlags: 0
@@ -4445,6 +4450,7 @@ MonoBehaviour:
   shell: {fileID: 2190576162106085471, guid: 9b9a91829601be3469ac0fd25774e324, type: 3}
   pearl: {fileID: 6882023581689391706, guid: 7265d3eac8fc8454eb1215400653aa3a, type: 3}
   sand: {fileID: 6882023581689391706, guid: ba22d7e679cdeff469a1934273b46122, type: 3}
+  inventoryScreen: {fileID: 146028727}
 --- !u!50 &1472137577
 Rigidbody2D:
   serializedVersion: 4
@@ -123074,7 +123080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9172532099393600989, guid: 4fbad7ffbd94d61428000e2c9ceb274a, type: 3}
       propertyPath: m_Name
-      value: General Inventory BG
+      value: General Inventory
       objectReference: {fileID: 0}
     - target: {fileID: 9172532099393600989, guid: 4fbad7ffbd94d61428000e2c9ceb274a, type: 3}
       propertyPath: m_IsActive
