@@ -20,12 +20,14 @@ public class PlayerInventory : MonoBehaviour
 
     public static float reachDistance { get; } = 3;
     public static UnityEvent<Vector3> Pickup = new();
+
+    static int inventorySize;
     
     static int shellsInInventory;
     static int pearlsInInventory;
     static int sandInInventory;
 
-    static string[] generalInventory = new string[20];
+    static string[] generalInventory;
 
     void Awake() {
         TradesClick.OnTradesClick += Trade;
@@ -33,9 +35,10 @@ public class PlayerInventory : MonoBehaviour
         _shellsInventoryText = shellsInventory;
         _pearlsInventoryText = pearlsInventory;
         _sandInventoryText = sandInventory;
+
+        generalInventory = new string[inventorySize];
     }
 
-    // Start is called before the first frame update
     void OnPickup()
     {
         Pickup?.Invoke(transform.position);
