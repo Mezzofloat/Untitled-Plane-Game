@@ -17,6 +17,7 @@ public class PlayerInventory : MonoBehaviour
     static TMP_Text _sandInventoryText;
 
     [SerializeField] GameObject shell, pearl, sand;
+    [Space] [SerializeField] GameObject inventoryScreen;
 
     public static float reachDistance { get; } = 3;
     public static UnityEvent<Vector3> Pickup = new();
@@ -98,5 +99,9 @@ public class PlayerInventory : MonoBehaviour
                 pearlsInventory.text = pearlsInInventory.ToString();
             }
         }
+    }
+
+    void OnInventory() {
+        inventoryScreen.SetActive(!inventoryScreen.activeSelf);
     }
 }
