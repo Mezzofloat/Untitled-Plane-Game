@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.14, y: 3.37, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,4 +98,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemNameAllLowercase: shell
-  pi: {fileID: 5543942863629877438, guid: 9fadf91a646303a4990f59e40a8ebb42, type: 3}
