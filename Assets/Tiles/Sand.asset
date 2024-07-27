@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
+  m_Script: {fileID: 11500000, guid: 5358de519488c9b47a63005f8e7fb663, type: 3}
   m_Name: Sand
   m_EditorClassIdentifier: 
   m_DefaultSprite: {fileID: -779199931, guid: 768a04e2b9f2cb54898753154d2863f9, type: 3}
@@ -311,3 +311,4 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: -1, y: 0, z: 0}
     m_RuleTransform: 0
+  siblingGroup: 0

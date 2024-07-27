@@ -17,7 +17,7 @@ public class ConnectToSand : RuleTile<ConnectToSand.Neighbor> {
     }
 }
 */
-public class ExampleSiblingRuleTile : RuleTile
+public class SiblingRuleTile : RuleTile<SiblingRuleTile.Neighbor>
 {
 
     public enum SiblingGroup
@@ -27,7 +27,7 @@ public class ExampleSiblingRuleTile : RuleTile
     }
     public SiblingGroup siblingGroup;
 
-    public class Neighbor : RuleTile<ExampleSiblingRuleTile.Neighbor> {
+    public class Neighbor : RuleTile.TilingRule.Neighbor {
         public const int Sibling = 3;
     }
 
@@ -38,14 +38,14 @@ public class ExampleSiblingRuleTile : RuleTile
 
         switch (neighbor)
         {
-            case TilingRule.Neighbor.This:
+            case Neighbor.This:
                 {
                     return Check_This(other);
                     
                     //other is ExampleSiblingRuleTile
                     //    && (other as ExampleSiblingRuleTile).siblingGroup == this.siblingGroup;
                 }
-            case TilingRule.Neighbor.NotThis:
+            case Neighbor.NotThis:
                 {
                     return Check_NotThis(other);
                 }
@@ -60,23 +60,23 @@ public class ExampleSiblingRuleTile : RuleTile
 
     bool Check_This(TileBase tile) {
         if (siblingGroup == SiblingGroup.Sand) {
-            return tile is ExampleSiblingRuleTile;
+            return tile is SiblingRuleTile;
         } else if (siblingGroup == SiblingGroup.Grass) {
-            return tile is ExampleSiblingRuleTile && (tile as ExampleSiblingRuleTile).siblingGroup == SiblingGroup.Grass;
+            return tile is SiblingRuleTile && (tile as SiblingRuleTile).siblingGroup == SiblingGroup.Grass;
         }
 
         return false;
     }
 
     bool Check_NotThis(TileBase tile) {
-        return !Check_This(tile);
+        return tile is not SiblingRuleTile;
     }
 
     bool Check_Sibling(TileBase tile) {
-        if (siblingGroup == SiblingGroup.Sand) {
-            return true;
-        } else if (siblingGroup == SiblingGroup.Grass) {
-            return tile is ExampleSiblingRuleTile && (tile as ExampleSiblingRuleTile).siblingGroup == SiblingGroup.Sand;
+        if (siblingGroup == SiblingGroup.Sand) return true;
+        
+        if (siblingGroup == SiblingGroup.Grass) {
+            return tile is SiblingRuleTile && (tile as SiblingRuleTile).siblingGroup == SiblingGroup.Sand;
         }
 
         return false;
