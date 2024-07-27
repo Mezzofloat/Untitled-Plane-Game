@@ -3,20 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-/*
-public class ConnectToSand : RuleTile<ConnectToSand.Neighbor> {
-    public class Neighbor : RuleTile.TilingRule.Neighbor {
-        public const int Other = 3;
-    }
-
-    public override bool RuleMatch(int neighbor, TileBase tile) {
-        switch (neighbor) {
-            case Neighbor.Other: return tile != this && tile != null;
-        }
-        return base.RuleMatch(neighbor, tile);
-    }
-}
-*/
 public class SiblingRuleTile : RuleTile<SiblingRuleTile.Neighbor>
 {
 
