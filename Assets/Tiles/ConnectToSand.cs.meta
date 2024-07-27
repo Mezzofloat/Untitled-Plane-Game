@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5358de519488c9b47a63005f8e7fb663
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_DefaultSprite: {instanceID: 0}
+  - m_DefaultGameObject: {instanceID: 0}
+  - Sand: {fileID: 11400000, guid: 542c277458d3f744d86f0c0b356e64df, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
