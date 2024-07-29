@@ -89,7 +89,11 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
-    void Trade(TradesClick tc) {
+    void Trade(Trade t) {
+        
+
+
+        /*
         if (int.TryParse(tc.GetComponentsInChildren<TextMeshProUGUI>()[0].text.Split(' ')[0], out var result)) {
             if (shellsInInventory >= result) { 
                 shellsInInventory -= result;
@@ -99,6 +103,15 @@ public class PlayerInventory : MonoBehaviour
                 pearlsInventory.text = pearlsInInventory.ToString();
             }
         }
+        */
+    }
+
+    bool DecreaseItem(ItemOnGround iog) {
+        return true;
+    }
+
+    bool IncreaseItem(ItemOnGround iog) {
+        return true;
     }
 
     void OnInventory() {

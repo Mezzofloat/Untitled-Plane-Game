@@ -24,6 +24,8 @@ public class PlayerTrade : MonoBehaviour
 
         foreach (Trade trade in ttf.Trades) {
             GameObject obj = Instantiate(tradeUnit, tradeWrapper.transform, false);
+            obj.GetComponent<TradesClick>().trade = trade;
+
             var objTexts = obj.GetComponentsInChildren<TextMeshProUGUI>();
             
             objTexts[0].text = trade.inputAmount + " " + trade.inputItem;
