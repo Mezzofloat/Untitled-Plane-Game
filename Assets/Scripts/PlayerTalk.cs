@@ -10,7 +10,7 @@ public class PlayerTalk : MonoBehaviour
     [SerializeField] TMP_Text speech;
     [SerializeField] GameObject talkUI;
     [SerializeField] List<Transform> npcs = new();
-    [SerializeField] string speechText = "The quick brown fox jumps over the lazy dog.";
+    [SerializeField] [TextArea(5, 10)] string speechText = "The quick brown fox jumps over the lazy dog.";
 
     Transform talkToMe;
     bool isSpeechSetting;
