@@ -29,6 +29,9 @@ public class PlayerInventory : MonoBehaviour
     static int sandInInventory;
 
     static string[] generalInventory;
+    string itemToDecrease;
+    int amountToDecreaseBy;
+    bool? increaseItems;
 
     void Awake() {
         TradesClick.OnTradesClick += Trade;
@@ -91,50 +94,74 @@ public class PlayerInventory : MonoBehaviour
 
     bool Trade(Trade t) {
         return DecreaseItem(t.inputItem, t.inputAmount) && IncreaseItem(t.outputItem, t.outputAmount);
-
-
-        /*
-        if (int.TryParse(tc.GetComponentsInChildren<TextMeshProUGUI>()[0].text.Split(' ')[0], out var result)) {
-            if (shellsInInventory >= result) { 
-                shellsInInventory -= result;
-                shellsInventory.text = shellsInInventory.ToString();
-
-                pearlsInInventory += int.Parse(tc.GetComponentsInChildren<TextMeshProUGUI>()[1].text.Split(' ')[0]);
-                pearlsInventory.text = pearlsInInventory.ToString();
-            }
-        }
-        */
     }
 
     bool DecreaseItem(string item, int amount) {
-        if (item == "shell") {
-            if (shellsInInventory > 0) {
-                shellsInInventory--;
-                return true;
+        if (item == "shell" && shellsInInventory >= amount) {
+            itemToDecrease = item;
+            StartCoroutine("DecreaseItemInLockstep");
+            amountToDecreaseBy = amount;
+            return true;
+        }
+
+        if (item == "pearl" && pearlsInInventory >= amount) {
+            itemToDecrease = item;
+            StartCoroutine("DecreaseItemInLockstep");
+            amountToDecreaseBy = amount;
+            return true;
+        }
+
+        if (item == "sand" && sandInInventory >= amount) {
+            itemToDecrease = item;
+            StartCoroutine("DecreaseItemInLockstep");
+            amountToDecreaseBy = amount;
+            return true;
+        }
+
+        int runningTally = 0;
+        foreach (string inventoryItem in generalInventory) {
+            if (inventoryItem.Equals(item)) {
+                runningTally++;
             }
         }
 
-        if (item == "pearl") {
-            if (pearlsInInventory > 0) {
-                pearlsInInventory--;
-                return true;
-            }
+        if (runningTally >= amount) {
+            itemToDecrease = item;
+            StartCoroutine("DecreaseItemInLockstep");
+            amountToDecreaseBy = amount;
+            return true;
         }
-
-        if (item == "sand") {
-            if (sandInInventory > 0) {
-                sandInInventory--;
-                return true;
-            }
-        }
-
-        
 
         return false;
     }
 
+    IEnumerator DecreaseItemInLockstep()
+    {
+        while (true)
+        {
+            if (increaseItems is null) yield return null;
+            else break;
+        }
+
+        if (!(bool)increaseItems)
+            yield break;
+
+        if (itemToDecrease == "shell")
+            shellsInInventory -= amountToDecreaseBy;
+
+
+        if (itemToDecrease == "pearl") 
+            pearlsInInventory -= amountToDecreaseBy;
+        
+
+        if (itemToDecrease == "sand") 
+            sandInInventory -= amountToDecreaseBy;
+        
+
+    }
+
     bool IncreaseItem(string item, int amount) {
-        return true;  
+        return false;  
     }
 
     void OnInventory() {
