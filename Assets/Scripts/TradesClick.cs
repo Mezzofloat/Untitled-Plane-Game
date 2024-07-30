@@ -36,10 +36,12 @@ public class TradesClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         if (whiteArrow.fillAmount != 1) { 
             arrowDefill = whiteArrow.DOFillAmount(0, 0.5f).SetEase(Ease.Linear);
         } else {
-            bool b = (bool)OnTradesClick?.Invoke(trade);
+            var b = OnTradesClick?.Invoke(trade);
             arrowDefill = whiteArrow.DOFillAmount(0, 0);
 
-            if (b) {
+            if (b is null) return;
+
+            if ((bool)b) {
                 TradeSucceed();
             } else {
                 TradeFail();
