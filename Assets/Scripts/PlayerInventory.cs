@@ -89,8 +89,8 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
-    void Trade(Trade t) {
-        
+    bool Trade(Trade t) {
+        return DecreaseItem(t.inputItem, t.inputAmount) && IncreaseItem(t.outputItem, t.outputAmount);
 
 
         /*
@@ -106,12 +106,35 @@ public class PlayerInventory : MonoBehaviour
         */
     }
 
-    bool DecreaseItem(ItemOnGround iog) {
-        return true;
+    bool DecreaseItem(string item, int amount) {
+        if (item == "shell") {
+            if (shellsInInventory > 0) {
+                shellsInInventory--;
+                return true;
+            }
+        }
+
+        if (item == "pearl") {
+            if (pearlsInInventory > 0) {
+                pearlsInInventory--;
+                return true;
+            }
+        }
+
+        if (item == "sand") {
+            if (sandInInventory > 0) {
+                sandInInventory--;
+                return true;
+            }
+        }
+
+        
+
+        return false;
     }
 
-    bool IncreaseItem(ItemOnGround iog) {
-        return true;
+    bool IncreaseItem(string item, int amount) {
+        return true;  
     }
 
     void OnInventory() {

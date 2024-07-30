@@ -9,7 +9,7 @@ using Unity.VisualScripting;
 
 public class TradesClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    public static event Action<Trade> OnTradesClick;
+    public static event Func<Trade, bool> OnTradesClick;
 
     public Trade trade;
 
@@ -36,8 +36,22 @@ public class TradesClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         if (whiteArrow.fillAmount != 1) { 
             arrowDefill = whiteArrow.DOFillAmount(0, 0.5f).SetEase(Ease.Linear);
         } else {
-            OnTradesClick?.Invoke(trade);
+            bool b = (bool)OnTradesClick?.Invoke(trade);
             arrowDefill = whiteArrow.DOFillAmount(0, 0);
+
+            if (b) {
+                TradeSucceed();
+            } else {
+                TradeFail();
+            }
         }
+    }
+
+    void TradeFail() {
+
+    }
+
+    void TradeSucceed() {
+
     }
 }
