@@ -97,22 +97,22 @@ public class PlayerInventory : MonoBehaviour
     bool DecreaseItem(string item, int amount) {
         if (item == "shell" && shellsInInventory >= amount) {
             itemToDecrease = item;
-            StartCoroutine("DecreaseItemInLockstep");
             amountToDecreaseBy = amount;
+            StartCoroutine("DecreaseItemInLockstep");
             return true;
         }
 
         if (item == "pearl" && pearlsInInventory >= amount) {
             itemToDecrease = item;
-            StartCoroutine("DecreaseItemInLockstep");
             amountToDecreaseBy = amount;
+            StartCoroutine("DecreaseItemInLockstep");
             return true;
         }
 
         if (item == "sand" && sandInInventory >= amount) {
             itemToDecrease = item;
-            StartCoroutine("DecreaseItemInLockstep");
             amountToDecreaseBy = amount;
+            StartCoroutine("DecreaseItemInLockstep");
             return true;
         }
 
@@ -125,8 +125,8 @@ public class PlayerInventory : MonoBehaviour
 
         if (runningTally >= amount) {
             itemToDecrease = item;
-            StartCoroutine("DecreaseItemInLockstep");
             amountToDecreaseBy = amount;
+            StartCoroutine("DecreaseItemInLockstep");
             return true;
         }
 
@@ -135,8 +135,7 @@ public class PlayerInventory : MonoBehaviour
 
     IEnumerator DecreaseItemInLockstep()
     {
-        while (true)
-        {
+        while (true) {
             if (increaseItems is null) yield return null;
             else break;
         }
@@ -144,15 +143,13 @@ public class PlayerInventory : MonoBehaviour
         if (!(bool)increaseItems)
             yield break;
 
-        if (itemToDecrease == "shell")
+        if (itemToDecrease == "shell") {
             shellsInInventory -= amountToDecreaseBy;
 
-
-        if (itemToDecrease == "pearl") 
+        if (itemToDecrease == "pearl") {
             pearlsInInventory -= amountToDecreaseBy;
         
-
-        if (itemToDecrease == "sand") 
+        if (itemToDecrease == "sand") {
             sandInInventory -= amountToDecreaseBy;
         
 
