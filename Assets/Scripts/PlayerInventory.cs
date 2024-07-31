@@ -145,9 +145,15 @@ public class PlayerInventory : MonoBehaviour
 
         if (itemToDecrease == "shell") {
             shellsInInventory -= amountToDecreaseBy;
+            _shellsInventoryText.text = shellsInInventory.ToString();
+            yield break;
+        }
 
         if (itemToDecrease == "pearl") {
             pearlsInInventory -= amountToDecreaseBy;
+            _pearlsInventoryText.text = pearlsInInventory.ToString();
+            yield break;
+        }        
         
         if (itemToDecrease == "sand") {
             sandInInventory -= amountToDecreaseBy;
