@@ -50,10 +50,10 @@ public class TradesClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     }
 
     void TradeFail() {
-
+        print("Trade failed.");
     }
 
     void TradeSucceed() {
-
+        print("Trade succeeded.");
     }
 }

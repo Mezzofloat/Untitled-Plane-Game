@@ -130,6 +130,7 @@ public class PlayerInventory : MonoBehaviour
             return true;
         }
 
+        print("Trade failed to assign decrement of input item.");
         return false;
     }
 
@@ -154,7 +155,7 @@ public class PlayerInventory : MonoBehaviour
             _pearlsInventoryText.text = pearlsInInventory.ToString();
             yield break;
         }        
-        
+
         if (itemToDecrease == "sand") {
             sandInInventory -= amountToDecreaseBy;
             _sandInventoryText.text = sandInInventory.ToString();
