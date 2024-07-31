@@ -91,7 +91,7 @@ public class PlayerInventory : MonoBehaviour
     }
 
     bool Trade(Trade t) {
-        return DecreaseItem(t.inputItem, t.inputAmount) && IncreaseItem(t.outputItem, t.outputAmount);
+        return DecreaseItem(t.inputItem.ToLower(), t.inputAmount) && IncreaseItem(t.outputItem.ToLower(), t.outputAmount);
     }
 
     bool DecreaseItem(string item, int amount) {
