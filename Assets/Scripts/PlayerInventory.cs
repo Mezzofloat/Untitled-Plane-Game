@@ -28,7 +28,7 @@ public class PlayerInventory : MonoBehaviour
     static int pearlsInInventory;
     static int sandInInventory;
 
-    static string[] generalInventory;
+    static List<string> generalInventory = new();
     string itemToDecrease;
     int amountToDecreaseBy;
     bool? increaseItems;
@@ -39,8 +39,6 @@ public class PlayerInventory : MonoBehaviour
         _shellsInventoryText = shellsInventory;
         _pearlsInventoryText = pearlsInventory;
         _sandInventoryText = sandInventory;
-
-        generalInventory = new string[inventorySize];
     }
 
     void OnPickup()
@@ -62,7 +60,7 @@ public class PlayerInventory : MonoBehaviour
             _sandInventoryText.text = sandInInventory.ToString();
         }
 
-        for (int i = 0; i < generalInventory.Length; i++) {
+        for (int i = 0; i < generalInventory.Count; i++) {
             if (generalInventory[i] is null) {
                 generalInventory[i] = item;
                 return;
