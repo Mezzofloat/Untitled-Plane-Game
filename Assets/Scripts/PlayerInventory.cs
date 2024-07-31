@@ -151,11 +151,53 @@ public class PlayerInventory : MonoBehaviour
         
         if (itemToDecrease == "sand") {
             sandInInventory -= amountToDecreaseBy;
-        
+            _sandInventoryText.text = sandInInventory.ToString();
+            yield break;
+        }
 
+        int count = 0;
+        for (int i = 0; i < generalInventory.Count; i++) {
+            if (generalInventory[i].Equals(itemToDecrease)) {
+                generalInventory.RemoveAt(i);
+                count++;
+                if (count == amountToDecreaseBy) {
+                    break;
+                }
+            }
+        }
     }
 
     bool IncreaseItem(string item, int amount) {
+        if (item == "shell") {
+            shellsInInventory += amount;
+            _shellsInventoryText.text = shellsInInventory.ToString();
+            increaseItems = true;
+            return true;
+        }
+
+        if (item == "pearl") {
+            pearlsInInventory += amount;
+            _pearlsInventoryText.text = pearlsInInventory.ToString();
+            increaseItems = true;
+            return true;
+        }
+        
+        if (item == "sand") {
+            sandInInventory += amount;
+            _sandInventoryText.text = sandInInventory.ToString();
+            increaseItems = true;
+            return true;
+        }
+
+        if (generalInventory.Count + amount < inventorySize) {
+            increaseItems = true;
+            for (int i = 0; i < amount; i++) {
+                generalInventory.Add(item);
+            }
+        }
+
+        print("Trade failed to increase output item.");
+        increaseItems = false;
         return false;  
     }
 
