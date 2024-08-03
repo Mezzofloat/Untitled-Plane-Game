@@ -105,6 +105,10 @@ public class PlayerInventory : MonoBehaviour
     }
 
     bool DecreaseItem(string item, int amount) {
+        if (amount == 0 || item == "") {
+            return true;
+        }
+
         if (item == "shell" && shellsInInventory >= amount) {
             itemToDecrease = item;
             amountToDecreaseBy = amount;
@@ -154,6 +158,10 @@ public class PlayerInventory : MonoBehaviour
         if (!(bool)increaseItems)
             yield break;
 
+        if (itemToDecrease is null || amountToDecreaseBy == 0) {
+            yield break;
+        }
+
         if (itemToDecrease == "shell") {
             shellsInInventory -= amountToDecreaseBy;
             _shellsInventoryText.text = shellsInInventory.ToString();
@@ -185,6 +193,11 @@ public class PlayerInventory : MonoBehaviour
     }
 
     bool IncreaseItem(string item, int amount) {
+        if (item is null || item == "" || amount == 0) {
+            increaseItems = true;
+            return true;
+        }
+
         if (item == "shell") {
             shellsInInventory += amount;
             _shellsInventoryText.text = shellsInInventory.ToString();
