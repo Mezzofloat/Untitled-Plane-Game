@@ -190,6 +190,8 @@ public class PlayerInventory : MonoBehaviour
                 }
             }
         }
+        
+        UpdateGeneralInventoryUI();
     }
 
     bool IncreaseItem(string item, int amount) {
@@ -223,6 +225,7 @@ public class PlayerInventory : MonoBehaviour
             increaseItems = true;
             for (int i = 0; i < amount; i++) {
                 generalInventory.Add(item);
+                UpdateGeneralInventoryUI();
             }
         }
 
