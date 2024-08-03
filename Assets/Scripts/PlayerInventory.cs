@@ -29,6 +29,8 @@ public class PlayerInventory : MonoBehaviour
     static int sandInInventory;
 
     static List<string> generalInventory = new();
+    public Transform generalInventoryUI;
+
     string itemToDecrease;
     int amountToDecreaseBy;
     bool? increaseItems;
@@ -44,6 +46,14 @@ public class PlayerInventory : MonoBehaviour
     void OnPickup()
     {
         Pickup?.Invoke(transform.position);
+    }
+
+    void UpdateGeneralInventoryUI() {
+        for (int i = 0; i < generalInventory.Count; i++) {
+            var item = generalInventory[i];
+
+            generalInventoryUI.GetChild(i).gameObject.GetComponent<UnityEngine.UI.Image>().sprite = (Sprite)Resources.Load($"Assets//Sprites//{item}");
+        }
     }
 
     public static void AddItem(string item) {
