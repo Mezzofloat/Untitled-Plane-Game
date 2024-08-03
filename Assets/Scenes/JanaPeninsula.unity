@@ -2949,14 +2949,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trades:
-  - inputAmount: 2
-    outputAmount: 4
-    inputItem: Shell
-    outputItem: Pearl
-  - inputAmount: 8
+  - inputAmount: 5
     outputAmount: 2
-    inputItem: People
-    outputItem: Shells
+    inputItem: Dandelion
+    outputItem: Shell
 --- !u!61 &1193139915
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3579,14 +3575,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trades:
-  - inputAmount: 2
-    outputAmount: 4
-    inputItem: Shell
-    outputItem: Pearl
-  - inputAmount: 8
+  - inputAmount: 1
     outputAmount: 2
-    inputItem: People
-    outputItem: Shells
+    inputItem: fishing_rod
+    outputItem: Shell
 --- !u!61 &1387605874
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4608,14 +4600,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trades:
-  - inputAmount: 2
-    outputAmount: 4
-    inputItem: Shells
-    outputItem: Pearls
-  - inputAmount: 4
-    outputAmount: 2
-    inputItem: Pearls
-    outputItem: Shells
+  - inputAmount: 12
+    outputAmount: 1
+    inputItem: Shell
+    outputItem: Fuel
+  - inputAmount: 1
+    outputAmount: 1
+    inputItem: Wheat
+    outputItem: Rose
 --- !u!1 &1499417282
 GameObject:
   m_ObjectHideFlags: 0
@@ -120823,14 +120815,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trades:
+  - inputAmount: 0
+    outputAmount: 1
+    inputItem: 
+    outputItem: fishing_rod
   - inputAmount: 2
-    outputAmount: 4
-    inputItem: Shell
-    outputItem: Pearl
-  - inputAmount: 8
     outputAmount: 2
-    inputItem: People
-    outputItem: Shells
+    inputItem: wood_plank
+    outputItem: Shell
 --- !u!61 &1644458254
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -120975,14 +120967,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trades:
-  - inputAmount: 2
-    outputAmount: 4
-    inputItem: Shell
-    outputItem: Pearl
-  - inputAmount: 8
-    outputAmount: 2
-    inputItem: People
-    outputItem: Shells
+  - inputAmount: 0
+    outputAmount: 1
+    inputItem: 
+    outputItem: Wheat
+  - inputAmount: 1
+    outputAmount: 0
+    inputItem: Rose
+    outputItem: 
 --- !u!61 &1647263455
 BoxCollider2D:
   m_ObjectHideFlags: 0
